@@ -272,7 +272,8 @@ int main(void){
     }
 
     // Flavor-only canary value, considering to switch to the real canary
-    g_canary = (unsigned long long)(uintptr_t)__stack_chk_guard;
+    // g_canary = (unsigned long long)(uintptr_t)__stack_chk_guard;
+    g_canary = (unsigned long long)(uintptr_t)0x9E3779B1u;
 
     if(!solar_gate()){
         puts("\nCoordinates go brrr");
